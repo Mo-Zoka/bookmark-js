@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="d-flex justify-content-center py-5">
+            <h1 class="d-inline-block">Bookmarker</h1>
+        </div>
+        <div class="box py-4">
+            <div>
+                <h2 class="gradient-text text-center">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div>
+                    <div class="mb-3">
+                        <label for="siteName" class="form-label"><i class="fa-solid fa-book-bookmark pe-2"></i>Site name</label>
+                        <input oninput="validateForm(this);" type="email" class="form-control" id="siteName" aria-describedby="emailHelp" placeholder="Bookmark Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="siteLink" class="form-label"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                        <input oninput="validateForm(this);" type="email" class="form-control" id="siteLink" aria-describedby="emailHelp" placeholder="Website URL">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button onclick="addBookMark();" type="button" class="btn btn-success px-5 my-2">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-4 text-center">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">Website Name</th>
+                    <th scope="col">Visit</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="myData">
+                  <!-- <tr>
+                    <th>1</th>
+                    <td>Mark</td>
+                    <td><button type="button" class="btn btn-warning">Visit</button></td>
+                    <td><button type="button" class="btn btn-danger">Delete</button></td>
+                  </tr> -->
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
